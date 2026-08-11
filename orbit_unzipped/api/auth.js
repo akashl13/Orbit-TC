@@ -1,0 +1,3 @@
+import supabase from './db-client.js';
+export async function requireUser(req,res){const token=req.headers.authorization?.replace('Bearer ','');if(!token){res.status(401).json({error:'Please sign in to continue.'});return null}const {data:{user},error}=await supabase.auth.getUser(token);if(error||!user){res.status(401).json({error:'Your session is invalid. Please sign in again.'});return null}return user}
+export function cors(req,res,methods){res.setHeader('Access-Control-Allow-Origin','*');res.setHeader('Access-Control-Allow-Methods',methods);res.setHeader('Access-Control-Allow-Headers','Content-Type, Authorization');if(req.method==='OPTIONS'){res.status(204).end();return true}return false}

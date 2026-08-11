@@ -1,0 +1,17 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import AiCvPro from './components/AiCvPro';
+import CvVault from './components/CvVault';
+import QuickMenu from './components/QuickMenu';
+import AuthPage from './pages/AuthPage';
+import ResetPassword from './pages/ResetPassword';
+import JobsPage from './pages/JobsPage';
+import CreateCvPage from './pages/CreateCvPage';
+import ProfilePage from './pages/ProfilePage';
+import { AuthProvider } from './contexts/AuthContext';
+import './index.css';
+const page=new URLSearchParams(window.location.search).get('page');
+const path=page?`/${page}`:window.location.pathname;
+const screen=path==='/sign-in'?<AuthPage mode="signin"/>:path==='/sign-up'?<AuthPage mode="signup"/>:path==='/forgot-password'?<AuthPage mode="forgot"/>:path==='/reset-password'?<ResetPassword/>:path==='/jobs'?<JobsPage/>:path==='/create-cv'?<CreateCvPage/>:path==='/profile'?<ProfilePage/>:<><App /><AiCvPro /><CvVault /></>;
+ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><AuthProvider>{screen}<QuickMenu /></AuthProvider></React.StrictMode>);

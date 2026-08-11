@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Senior Frontend Engineer",
+    "company": "Aethera Labs",
+    "category": "Engineering",
+    "location": "Bengaluru, India",
+    "employment_type": "Full-time",
+    "salary": "₹18,00,000 - ₹30,00,000",
+    "description": "Build delightful, high-performance user interfaces using React and TypeScript."
+  },
+  {
+    "id": 2,
+    "title": "Product Designer",
+    "company": "Orbit Studio",
+    "category": "Design",
+    "location": "Remote",
+    "employment_type": "Contract",
+    "salary": "Competitive",
+    "description": "Design intuitive product experiences and 3D-inspired UI concepts for web products."
+  },
+  {
+    "id": 3,
+    "title": "Growth Marketer",
+    "company": "Nova Collective",
+    "category": "Marketing",
+    "location": "Mumbai, India",
+    "employment_type": "Full-time",
+    "salary": "₹10,00,000 - ₹16,00,000",
+    "description": "Drive user acquisition and retention with data-led experiments."
+  }
+]
